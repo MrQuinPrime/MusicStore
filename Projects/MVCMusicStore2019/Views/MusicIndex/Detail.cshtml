@@ -1,0 +1,20 @@
+﻿@model AlbumDisplayViewModel
+
+@{
+   ViewBag.Title="音乐专辑："+Model.Name;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="albumDetail">
+    <img src="/Pics/@Url.Content(Model.UrlString)" class="poster" alt="@Model.Name" />
+    <div>@Html.LabelFor(x=>x.Name):@Model.Name</div>
+    <div>@Html.LabelFor(x => x.Description):@Model.Description</div>
+    <div>@Html.LabelFor(x => x.ArtistName):@Model.Artist.Name</div>
+    <div>@Html.LabelFor(x => x.GenreName):@Model.Genre.Name</div>
+    <div>@Html.LabelFor(x => x.AlbumTypeName):@Model.AlbumType.Name</div>
+    <div>@Html.LabelFor(x => x.Issuer):@Model.Issuer</div>
+    <div>@Html.LabelFor(x => x.IssueDate):@Model.IssueDate</div>
+    <div>@Html.LabelFor(x => x.Language):@Model.Language</div>
+    <div>@Html.LabelFor(x => x.Price):@Model.Price</div>
+</div>

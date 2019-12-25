@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HomeControllerRC">
+  <SequenceDesignerModelMoniker Id="7a4e1ade-13cf-49ab-bb8e-170fc62c33d7" />
+  <nestedChildShapes>
+    <lifelineShape Id="4ba991c5-0ee2-490e-af32-53a7d2f07ca6" absoluteBounds="1.525, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="fb5d3ff3-d3b0-4a52-a3ec-87316dc39ddc" LastKnownName="LoginReQ" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="3534916d-8763-40d4-b192-dd73888dcba2" absoluteBounds="1.0999999999999999, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="fb5d3ff3-d3b0-4a52-a3ec-87316dc39ddc" LastKnownName="LoginReQ" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="d56377cb-5216-41d8-a894-fe7095753498" absoluteBounds="1.525, 1, 0, 7">
+          <lifelineMoniker Id="fb5d3ff3-d3b0-4a52-a3ec-87316dc39ddc" LastKnownName="LoginReQ" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>

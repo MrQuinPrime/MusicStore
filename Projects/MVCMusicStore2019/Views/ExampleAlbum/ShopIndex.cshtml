@@ -1,0 +1,94 @@
+﻿@using MVCMusicStore2019.ViewModels
+@model IEnumerable<MVCMusicStore2019.ViewModels.AlbumDisplayViewModel>
+
+@{ ViewBag.Title = "音乐专辑购物车";}
+
+<h2>系统管理员 @ViewBag.Title 页面</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        @ViewBag.Title 列表
+    </div>
+
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.UrlString)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+            <th>@Html.DisplayNameFor(model => model.Artist)</th>
+            <th>@Html.DisplayNameFor(model => model.Genre)</th>
+            <th>@Html.DisplayNameFor(model => model.AlbumType)</th>
+            <th>@Html.DisplayNameFor(model => model.IssueDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Issuer)</th>
+            <th>@Html.DisplayNameFor(model => model.Language)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+        </tr>
+        @if (Model == null)
+        {
+            <tr><td colspan="3" class="text-center">没有用户列表数据</td></tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    @Html.HiddenFor(modelItem => item.Id)
+                    <td>@Html.DisplayFor(modelItem => item.OrderNumber)</td>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.UrlString)*@
+                        <img src="/Pics/@Url.Content(item.UrlString)" class="urlimg" />
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Artist.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Genre.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AlbumType.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IssueDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Issuer)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Language)</td>
+                    <td>@String.Format("{0:c}", item.Price)</td>
+                    <td>
+                        @*@{ 
+                            var ajaxOptions = new AjaxOptions()
+                            {
+                                HttpMethod = "post",
+                                UpdateTargetId = "renderBody",
+                                InsertionMode = InsertionMode.Replace,
+                                LoadingElementId = "loading",
+                                LoadingElementDuration = 2000
+                            };
+                        }*@
+                        @*@Ajax.ActionLink("点赞","AddCTR", "MusicIndex",new { id=item.Id },ajaxOptions,
+                       new { @class="btn btn-warning btn-xs"})*@
+                        @Ajax.ActionLink("点赞","AddCTR","MusicIndex",new {id=item.Id },new AjaxOptions()
+                   {
+                       OnComplete = "return AddCTR()"
+                   })
+                    </td>
+
+
+                    <td>
+                        @using (Html.BeginForm("TryListening", "ExampleAlbum", new { id = item.Id }))
+                    {
+
+                           @Html.ActionLink("￥", "CheckOut", "ExampleAlbum", new { id = item.Id },
+                           new { @class = "btn btn-primary btn-xs",@title="购买" })
+
+                            @Html.ActionLink(" ", "AddToCart", "ShoppingCart", new { id = item.Id ,price=item.Price},
+               new { @class = "btn btn-primary btn-xs glyphicon glyphicon-shopping-cart",@title="加入购物车" })
+                            
+                            <button class="btn btn-danger btn-xs" type="submit">
+                                <span class="glyphicon glyphicon-headphones" tiele="试听"></span>
+                            </button>
+                            }
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/MusicStore/MusicHome.js"></script>

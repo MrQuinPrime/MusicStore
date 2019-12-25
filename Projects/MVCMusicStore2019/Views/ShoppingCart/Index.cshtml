@@ -1,0 +1,64 @@
+﻿@model MVCMusicStore2019.ViewModels.ShoppingCartViewModel
+
+
+@{
+    ViewBag.Title = "购物车页面";
+}
+
+<h3>@ViewBag.Title</h3>
+
+@*<div>
+        <input type="hidden" id="CurrentGenreSelectedId" value="@Model.GenreId" />
+    </div>*@
+
+@*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@@*数据注解验证使用*@
+
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();*@
+
+    <table id="table table-condensed table-striped">
+        <thead>
+            <tr>
+                <th><label><input class="check-all check" type="checkbox" />&nbsp;全选</label></th>
+                <th>专辑</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>金额</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (this.Model.Items.Count() == 0)
+            {
+                <tr><td>没有购物车数据</td></tr>
+            }
+            else
+            {
+                foreach (ShoppingCartItem item in this.Model.Items)
+                {
+                    <tr>
+                        <td>
+                            <img />
+                            @Html.RouteLink(@item.AlbumName, "","", new { id = @item.Id, price = item.Price })
+                        </td>
+                        <td>
+                            ￥@item.Price.ToString("#0.00")
+                        </td>
+                        <td>
+                            ￥@item.SubTotalPrice.ToString("#0.00")
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="3"></td>
+                    <td><b>总价：￥@this.Model.TotalPrice.ToString("#0.00")</b></td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+@*}*@
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/MusicStore/ShopCart.js"></script>

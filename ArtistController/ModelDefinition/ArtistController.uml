@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="58f1185c-6945-46b7-b539-c41cb48cc5ea"
+  name="ArtistController" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="7b618aa6-67b0-457a-9f53-d37f57d15678"
+        name="ArtistController"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="d6289dd5-5666-4597-b1c5-809e3c35a21b">
+            <body>private readonly IEntityRepository&lt;Artist&gt; _Service;
+        // GET: ExampleArtist
+       public ExampleArtistController(IEntityRepository&lt;Artist&gt; service)
+        {
+            this._Service = service;
+        }private readonly IEntityRepository&lt;Artist&gt; _Service;
+        // GET: ExampleArtist
+       public ExampleArtistController(IEntityRepository&lt;Artist&gt; service)
+        {
+            this._Service = service;
+        }</body>
+            <annotatedElements>
+              <lifelineMoniker
+                Id="3cac27cf-8a99-4685-b73a-1c5e2e8fa02c"
+                LastKnownName="AdminArtistController"
+                LastKnownLocation="ArtistController.uml" />
+            </annotatedElements>
+          </comment>
+          <comment
+            Id="94578334-a040-4b50-a59b-588b4142d1db">
+            <body> readonly DbContext _context;
+        public EntityRepository(DbContext context)
+        {
+            //list = new List&lt;T&gt;();
+            //T bo = new T();
+            _context = context;
+        }
+
+</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="e88caf45-f75c-45a9-90f1-bbd9ee40d62b"
+                LastKnownName="BehaviorExecutionSpecification2"
+                LastKnownLocation="ArtistController.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="28c79233-a102-46fc-b758-eff60b81d747"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+                LastKnownName="IEntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c1c2fb99-7c67-436b-a0c2-d5296f5493a3"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ArtistController.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="98a91e3c-2b22-4ccb-821b-d0c37cb2109c"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ArtistController.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="31d24c42-ded3-461c-a5ef-3e9a7b53356f"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ArtistController.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e3a15c73-b721-4538-8e66-f5fcf4a50fb8"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ArtistController.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="98a91e3c-2b22-4ccb-821b-d0c37cb2109c"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3a38bb16-5bdd-4232-8b06-cf71b7d61583"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+                LastKnownName="IEntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66c1e2b1-261a-4973-8246-049e67760453"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="3cac27cf-8a99-4685-b73a-1c5e2e8fa02c"
+                LastKnownName="AdminArtistController"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="31d24c42-ded3-461c-a5ef-3e9a7b53356f"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+                LastKnownName="IEntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="e88caf45-f75c-45a9-90f1-bbd9ee40d62b"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="bfc01f02-3e44-4d74-8a8b-dd113ff6f762"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ArtistController.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f7cadacc-7238-4f64-b343-6cb21b5a2888"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ArtistController.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="76efd80d-341c-4317-a8e2-2f07d7612c50"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ArtistController.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="77f0487a-52e8-4705-aecb-f097968c728b"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ArtistController.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f5b30acf-8729-475d-8be9-4e12d5b88127"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ArtistController.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f7cadacc-7238-4f64-b343-6cb21b5a2888"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="707330b2-cde8-44f1-a956-be3246bec1e1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e3a15c73-b721-4538-8e66-f5fcf4a50fb8"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+                LastKnownName="IEntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="76efd80d-341c-4317-a8e2-2f07d7612c50"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c1c2fb99-7c67-436b-a0c2-d5296f5493a3"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eccee72b-fefd-4443-a10f-a341f918ba0e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+                LastKnownName="IEntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="bfdf66c2-9b69-40e1-bc01-04833d0eb3b7"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+                LastKnownName="DataBase"
+                LastKnownLocation="ArtistController.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9555677d-ae18-469f-a7d1-42658913e823"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ArtistController.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e8bdda09-88e6-4f9d-9b4e-55ec52336c9c"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ArtistController.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fe503390-322e-4e87-b266-e356f034a1ca"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ArtistController.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dfab4e35-d53b-4936-bf7f-57d175aea818"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ArtistController.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e8bdda09-88e6-4f9d-9b4e-55ec52336c9c"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="adccd560-bec4-4eda-996a-8e2da38ebf8b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+                LastKnownName="DataBase"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="77f0487a-52e8-4705-aecb-f097968c728b"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fe503390-322e-4e87-b266-e356f034a1ca"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+                LastKnownName="DataBase"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dfab4e35-d53b-4936-bf7f-57d175aea818"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+                LastKnownName="DataBase"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f5b30acf-8729-475d-8be9-4e12d5b88127"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9555677d-ae18-469f-a7d1-42658913e823"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f337e62b-7c11-4474-a3b2-9ca8a8eb7fec"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+                LastKnownName="DataBase"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="bfc01f02-3e44-4d74-8a8b-dd113ff6f762"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c7f5bdc3-0f3f-4cea-93b8-17bada931b9d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ArtistController.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+                LastKnownName="EntityRepository"
+                LastKnownLocation="ArtistController.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="3cac27cf-8a99-4685-b73a-1c5e2e8fa02c"
+            name="AdminArtistController"
+            isActor="false"
+            lifelineDisplayName="AdminArtistController">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="66c1e2b1-261a-4973-8246-049e67760453"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ArtistController.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="bb53b69b-ce0b-4c54-9950-456992bb43e6"
+            name="IEntityRepository"
+            isActor="false"
+            lifelineDisplayName="IEntityRepository">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="98a91e3c-2b22-4ccb-821b-d0c37cb2109c"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="ArtistController.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c1c2fb99-7c67-436b-a0c2-d5296f5493a3"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="ArtistController.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="6691c514-fefc-46ad-b5b8-783d8d2a4818"
+            name="EntityRepository"
+            isActor="false"
+            lifelineDisplayName="EntityRepository">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="f7cadacc-7238-4f64-b343-6cb21b5a2888"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="ArtistController.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bfc01f02-3e44-4d74-8a8b-dd113ff6f762"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="ArtistController.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ea853ed6-a2ce-4e6b-8744-886d2c2d5c11"
+            name="DataBase"
+            isActor="false"
+            lifelineDisplayName="DataBase">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="e8bdda09-88e6-4f9d-9b4e-55ec52336c9c"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="ArtistController.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9555677d-ae18-469f-a7d1-42658913e823"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="ArtistController.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="db95501f-3be6-4e22-bc77-abd14e9b32ee"
+            name="构造函数注入"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="66c1e2b1-261a-4973-8246-049e67760453"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="ArtistController.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="31d24c42-ded3-461c-a5ef-3e9a7b53356f"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="ArtistController.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7847e9b2-3794-48b0-9e43-e490b0bd97b3"
+            name="接口IEntityRepository实现"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e3a15c73-b721-4538-8e66-f5fcf4a50fb8"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="ArtistController.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="76efd80d-341c-4317-a8e2-2f07d7612c50"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="ArtistController.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="35f717cd-7de4-4387-9f4e-bd5fd19a7ece"
+            name="对库操作实现"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="77f0487a-52e8-4705-aecb-f097968c728b"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="ArtistController.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fe503390-322e-4e87-b266-e356f034a1ca"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="ArtistController.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3c9af74c-c817-49cd-9d19-ecc14fff2080"
+            name="return Result"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dfab4e35-d53b-4936-bf7f-57d175aea818"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="ArtistController.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f5b30acf-8729-475d-8be9-4e12d5b88127"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="ArtistController.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3a38bb16-5bdd-4232-8b06-cf71b7d61583"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eccee72b-fefd-4443-a10f-a341f918ba0e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="707330b2-cde8-44f1-a956-be3246bec1e1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c7f5bdc3-0f3f-4cea-93b8-17bada931b9d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="adccd560-bec4-4eda-996a-8e2da38ebf8b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f337e62b-7c11-4474-a3b2-9ca8a8eb7fec"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
